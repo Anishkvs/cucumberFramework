@@ -35,32 +35,37 @@ public void user_search_the_same_shortname_in_offer_page_to_check_if_product_exi
    
 	switchToOfferPage();
 	//OffersPage OffersPage = new OffersPage(testContextSetup.driver);
-	OffersPage OffersPage = testContextSetup.pageObjectManager.getOffersPage();
+	OffersPage offersPage = testContextSetup.pageObjectManager.getOffersPage();
 
-	OffersPage.searchItem(shortName);
+	offersPage.searchItem(shortName);
 	//testContextSetup.driver.findElement(By.xpath("//input[@id='search-field']")).sendKeys(shortName);
 	Thread.sleep(2000);
 	//OfferPageProductName = testContextSetup.driver.findElement(By.cssSelector("tr td:nth-child(1)")).getText();
 	
-	OfferPageProductName = OffersPage.getProductName();
+	OfferPageProductName = offersPage.getProductOfferName();
 	System.out.println(OfferPageProductName);
 	 
 }
 
     public void switchToOfferPage() {
-    	if(testContextSetup.driver.getCurrentUrl().equalsIgnoreCase("https://rahulshettyacademy.com/seleniumPractise/#/offers"));
+    	//if(testContextSetup.driver.getCurrentUrl().equalsIgnoreCase("https://rahulshettyacademy.com/seleniumPractise/#/offers"));
     	//testContextSetup.driver.findElement(By.linkText("Top Deals")).click();
-    	OffersPage OffersPage = new OffersPage(testContextSetup.driver);
-    	OffersPage.SelectTopDealPage();
-    	testContextSetup.generalUtils.switchWindowToChild();
+    	//OffersPage OffersPage = new OffersPage(testContextSetup.driver);
+    	//OffersPage.SelectTopDealPage();
+    	//testContextSetup.generalUtils.switchWindowToChild();
    
+    	//if switched to offer page-> skip below part
+    	LandingPage landingPage  =testContextSetup.pageObjectManager.getLandingPage();
+    	landingPage.SelectTopDealPage();
+    	testContextSetup.generalUtils.switchWindowToChild();
+    	//explicit wait, parse string
 
 	}
 
 @Then("validate product name in offers page matchs with landing page.")
 public void validate_product_name_in_offers_page_matchs_with_landing_page() {
 	Assert.assertEquals(OfferPageProductName, testContextSetup.LandingPageProductName);
-	testContextSetup.driver.quit();
+	//testContextSetup.driver.quit();
 }
 
 

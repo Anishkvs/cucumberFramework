@@ -24,7 +24,7 @@ public class OffersPage {
 		driver.findElement(search).sendKeys(name);
 	}
 	
-	public String getProductName()
+	public String getProductOfferName()
 	{
 		return driver.findElement(ProductName).getText();
 	}
@@ -32,7 +32,7 @@ public class OffersPage {
 	{
 		driver.findElement(offerPageProductName).getText();
 	}
-	public void SelectTopDealPage() 
+	public void selectTopDealPage() 
 	{
 		driver.findElement(TopDeals).click();	
 

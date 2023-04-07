@@ -20,19 +20,21 @@ public class LandingPageStepDefinitions {
 	public String OfferPageProductName;
 	public String LandingPageProductName;
 	TestContextSetup testContextSetup;
+	LandingPage landingPage;
+
 	
 	public LandingPageStepDefinitions(TestContextSetup testContextSetup)
 	{
 		this.testContextSetup  = testContextSetup;
+		this.landingPage =testContextSetup.pageObjectManager.getLandingPage();
+
 	}
 	
 @Given("User is on GreenCart landing page")
 public void user_is_on_green_cart_landing_page() {
  
-	System.setProperty("webdriver.chrome.driver","D:/driver/chromedriver.exe");
-	testContextSetup.driver = new ChromeDriver();
-	testContextSetup.driver.get("https://rahulshettyacademy.com/seleniumPractise/#/");
-	testContextSetup.driver.manage().window().maximize();
+	Assert.assertTrue(landingPage.getTitleLandingPage().contains("GreenKart"));
+
 	
 }
 

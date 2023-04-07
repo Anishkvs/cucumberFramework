@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\Anish\AppData\Local\Temp\testng-eclipse-689234659\testng-customsuite.xml</span>
+                    <span>C:\Users\Anish\AppData\Local\Temp\testng-eclipse-387900173\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -130,12 +130,30 @@
                   </a> <!-- runScenario("Search experience for product search in both homepage and offer page", "Search the product") -->
                   <span class="method-name">runScenario</span>
                   <span class="parameters">("Search experience for product search in both homepage and offer page","Search the product")</span>
-                  <div class="stack-trace">java.util.NoSuchElementException
-	at java.base/java.util.LinkedHashMap$LinkedHashIterator.nextNode(LinkedHashMap.java:758)
-	at java.base/java.util.LinkedHashMap$LinkedKeyIterator.next(LinkedHashMap.java:778)
-	at Utils.GeneralUtils.switchWindowToChild(GeneralUtils.java:22)
-	at stepDefinitions.OfferPageStepDefinitions.switchToOfferPage(OfferPageStepDefinitions.java:55)
-	at stepDefinitions.OfferPageStepDefinitions.user_search_the_same_shortname_in_offer_page_to_check_if_product_exist(OfferPageStepDefinitions.java:36)
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;h4.product-name&quot;}
+  (Session info: chrome=111.0.5563.147)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-4U73KN9&apos;, ip: &apos;192.168.1.56&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.147, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\Anish\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:50839}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f7b979e4910a9e9cbc0abe5c07d0a115
+*** Element info: {Using=css selector, value=h4.product-name}
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:420)
+	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:431)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at pageObjects.OffersPage.getProductOfferName(OffersPage.java:29)
+	at stepDefinitions.OfferPageStepDefinitions.user_search_the_same_shortname_in_offer_page_to_check_if_product_exist(OfferPageStepDefinitions.java:45)
 	at ✽.user search for &quot;Tom&quot; shortname in offer page to check if product exist with same name(file:///C:/Users/Anish/eclipse-workspace/cucumber/cucu.framework/src/test/java/features/searchProduct.feature:7)
 
 </div> <!-- stack-trace -->
@@ -148,7 +166,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Anish\AppData\Local\Temp\testng-eclipse-689234659\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Anish\AppData\Local\Temp\testng-eclipse-387900173\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -209,12 +227,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'cucumberOptions.TestNgTestRunner')
-data.setCell(0, 3, 10753);
+data.setCell(0, 3, 6977);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 10 seconds</span>
+              <span class="suite-total-time">Total running time: 6 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -242,18 +260,18 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">cucumberOptions.TestNgTestRunner</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">setUpClass(org.testng.TestRunner@21f8e55f)</span>
+                <span class="method-name">setUpClass(org.testng.TestRunner@38eb2c50)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">runScenario("Search experience for product search in both homepage and offer page", "Search the product")</span>
-                <span class="method-start">314 ms</span>
+                <span class="method-start">203 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">11075 ms</span>
+                <span class="method-start">7186 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
