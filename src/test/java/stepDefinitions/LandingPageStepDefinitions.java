@@ -38,7 +38,7 @@ public void user_is_on_green_cart_landing_page() {
 	
 }
 
-@When("user search with shortName {string} and extract the actual name of product")
+@When("^user search with shortName (.+) and extract the actual name of product$")
 public void user_search_with_short_name_and_extract_the_actual_name_of_product(String shortName) throws InterruptedException {
 
 	//LandingPage landingPage = new LandingPage(testContextSetup.driver);
@@ -47,7 +47,7 @@ public void user_search_with_short_name_and_extract_the_actual_name_of_product(S
 	
 		
 	//testContextSetup.driver.findElement(By.xpath("//input[@type='search']")).sendKeys(shortName);
-	Thread.sleep(2000);
+	Thread.sleep(1500);
 	//testContextSetup.LandingPageProductName =testContextSetup.driver.findElement(By.cssSelector("h4.product-name")).getText().split("-")[0].trim();
 	testContextSetup.LandingPageProductName =landingPage.getProductName().split("-")[0].trim();
 	

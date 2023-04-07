@@ -30,7 +30,7 @@ public class OfferPageStepDefinitions {
 	}
 
 
-@Then("user search for {string} shortname in offer page to check if product exist with same name")
+@Then("^user search for (.+) shortname in offer page to check if product exist with same name$")
 public void user_search_the_same_shortname_in_offer_page_to_check_if_product_exist(String shortName) throws InterruptedException {
    
 	switchToOfferPage();
@@ -39,7 +39,7 @@ public void user_search_the_same_shortname_in_offer_page_to_check_if_product_exi
 
 	offersPage.searchItem(shortName);
 	//testContextSetup.driver.findElement(By.xpath("//input[@id='search-field']")).sendKeys(shortName);
-	Thread.sleep(2000);
+	Thread.sleep(1500);
 	//OfferPageProductName = testContextSetup.driver.findElement(By.cssSelector("tr td:nth-child(1)")).getText();
 	
 	OfferPageProductName = offersPage.getProductOfferName();
@@ -65,8 +65,8 @@ public void user_search_the_same_shortname_in_offer_page_to_check_if_product_exi
 @Then("validate product name in offers page matchs with landing page.")
 public void validate_product_name_in_offers_page_matchs_with_landing_page() throws InterruptedException {
 	Assert.assertEquals(OfferPageProductName, testContextSetup.LandingPageProductName);
-	Thread.sleep(5000);
-	testContextSetup.driver.quit();
+	Thread.sleep(1000);
+	//testContextSetup.driver.quit();
 }
 
 
