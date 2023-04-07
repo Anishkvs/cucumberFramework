@@ -12,6 +12,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pageObjects.LandingPage;
+import pageObjects.PageObjectManager;
 
 public class LandingPageStepDefinitions {
 
@@ -38,7 +39,8 @@ public void user_is_on_green_cart_landing_page() {
 @When("user search with shortName {string} and extract the actual name of product")
 public void user_search_with_short_name_and_extract_the_actual_name_of_product(String shortName) throws InterruptedException {
 
-	LandingPage landingPage = new LandingPage(testContextSetup.driver);
+	//LandingPage landingPage = new LandingPage(testContextSetup.driver);
+	LandingPage landingPage = testContextSetup.pageObjectManager.getLandingPage();
 	landingPage.searchItem(shortName);
 	
 		

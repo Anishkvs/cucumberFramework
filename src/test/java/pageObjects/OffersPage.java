@@ -14,9 +14,10 @@ public class OffersPage {
 		
 	}
 
-	By search = By.xpath("//input[@type='search']");
-	By ProductName = By.cssSelector("h4.product-name");
-	By offerPageProductName = By.cssSelector("tr td:nth-child(1)");
+	private By search = By.xpath("//input[@type='search']");
+	private By ProductName = By.cssSelector("h4.product-name");
+	private By offerPageProductName = By.cssSelector("tr td:nth-child(1)");
+	private By TopDeals = By.linkText("Top Deals");
 	
 	public void searchItem(String name) 
 	{
@@ -30,5 +31,10 @@ public class OffersPage {
 	public void offerPageProductNameItem()
 	{
 		driver.findElement(offerPageProductName).getText();
+	}
+	public void SelectTopDealPage() 
+	{
+		driver.findElement(TopDeals).click();	
+
 	}
 }

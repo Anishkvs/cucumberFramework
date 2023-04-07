@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Apr 05 11:41:08 IST 2023</td>
+<td>Started on:</td><td>Fri Apr 07 15:55:55 IST 2023</td>
 </tr>
-<tr><td>Total time:</td><td>7 seconds (7199 ms)</td>
+<tr><td>Total time:</td><td>11 seconds (11117 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,8 +67,8 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td><b>Attribute(s)</b></td>
 <td width="30%"><b>Exception</b></td>
@@ -77,8 +77,23 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='cucumberOptions.TestNgTestRunner.runScenario()'><b>runScenario</b><br>Test class: cucumberOptions.TestNgTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search experience for product search in both homepage and offer page", "Search the product"</td>
-<td></td>
-<td>6</td>
+<td><div><pre>java.util.NoSuchElementException
+	at java.base/java.util.LinkedHashMap$LinkedHashIterator.nextNode(LinkedHashMap.java:758)
+	at java.base/java.util.LinkedHashMap$LinkedKeyIterator.next(LinkedHashMap.java:778)
+	at Utils.GeneralUtils.switchWindowToChild(GeneralUtils.java:22)
+	at stepDefinitions.OfferPageStepDefinitions.switchToOfferPage(OfferPageStepDefinitions.java:55)
+	at stepDefinitions.OfferPageStepDefinitions.user_search_the_same_shortname_in_offer_page_to_check_if_product_exist(OfferPageStepDefinitions.java:36)
+	at ?.user search for &quot;Tom&quot; shortname in offer page to check if product exist with same name(file:///C:/Users/Anish/eclipse-workspace/cucumber/cucu.framework/src/test/java/features/searchProduct.feature:7)
+</pre></div><a href='#' onClick='toggleBox("stack-trace295700833", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace295700833'><pre>java.util.NoSuchElementException
+	at java.base/java.util.LinkedHashMap$LinkedHashIterator.nextNode(LinkedHashMap.java:758)
+	at java.base/java.util.LinkedHashMap$LinkedKeyIterator.next(LinkedHashMap.java:778)
+	at Utils.GeneralUtils.switchWindowToChild(GeneralUtils.java:22)
+	at stepDefinitions.OfferPageStepDefinitions.switchToOfferPage(OfferPageStepDefinitions.java:55)
+	at stepDefinitions.OfferPageStepDefinitions.user_search_the_same_shortname_in_offer_page_to_check_if_product_exist(OfferPageStepDefinitions.java:36)
+	at ?.user search for &quot;Tom&quot; shortname in offer page to check if product exist with same name(file:///C:/Users/Anish/eclipse-workspace/cucumber/cucu.framework/src/test/java/features/searchProduct.feature:7)
+</pre></div></td>
+<td>10</td>
 <td>cucumberOptions.TestNgTestRunner@4c1909a3</td></tr>
 </table><p>
 </body>

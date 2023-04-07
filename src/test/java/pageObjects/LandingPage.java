@@ -13,8 +13,9 @@ public class LandingPage {
 		
 	}
 
-	By search = By.xpath("//input[@type='search']");
-	By ProductName = By.cssSelector("h4.product-name");
+	//Encapsulation
+	private By search = By.xpath("//input[@type='search']");
+	private By ProductName = By.cssSelector("h4.product-name");
 	
 	public void searchItem(String name) 
 	{
