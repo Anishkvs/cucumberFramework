@@ -63,9 +63,10 @@ public void user_search_the_same_shortname_in_offer_page_to_check_if_product_exi
 	}
 
 @Then("validate product name in offers page matchs with landing page.")
-public void validate_product_name_in_offers_page_matchs_with_landing_page() {
+public void validate_product_name_in_offers_page_matchs_with_landing_page() throws InterruptedException {
 	Assert.assertEquals(OfferPageProductName, testContextSetup.LandingPageProductName);
-	//testContextSetup.driver.quit();
+	Thread.sleep(5000);
+	testContextSetup.driver.quit();
 }
 
 

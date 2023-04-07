@@ -15,7 +15,8 @@ public class OffersPage {
 	}
 
 	private By search = By.xpath("//input[@type='search']");
-	private By ProductName = By.cssSelector("h4.product-name");
+	private By ProductName = By.xpath("//table/tbody/tr/td[1]");
+	//private By ProductName = By.cssSelector("h4.product-name");
 	private By offerPageProductName = By.cssSelector("tr td:nth-child(1)");
 	private By TopDeals = By.linkText("Top Deals");
 	
