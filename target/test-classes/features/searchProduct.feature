@@ -1,5 +1,5 @@
 Feature: Search the product
-
+@searchProduct
 Scenario Outline: Search experience for product search in both homepage and offer page
 
 Given User is on GreenCart landing page

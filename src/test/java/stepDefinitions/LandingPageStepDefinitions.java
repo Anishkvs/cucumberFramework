@@ -1,18 +1,11 @@
 package stepDefinitions;
 
-import static org.testng.Assert.assertEquals;
-import java.util.Iterator;
-import java.util.Set;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import Utils.TestContextSetup;
 import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pageObjects.LandingPage;
-import pageObjects.PageObjectManager;
 
 public class LandingPageStepDefinitions {
 
@@ -42,7 +35,7 @@ public void user_is_on_green_cart_landing_page() {
 public void user_search_with_short_name_and_extract_the_actual_name_of_product(String shortName) throws InterruptedException {
 
 	//LandingPage landingPage = new LandingPage(testContextSetup.driver);
-	LandingPage landingPage = testContextSetup.pageObjectManager.getLandingPage();
+	//LandingPage landingPage = testContextSetup.pageObjectManager.getLandingPage();
 	landingPage.searchItem(shortName);
 	
 		
@@ -55,7 +48,12 @@ public void user_search_with_short_name_and_extract_the_actual_name_of_product(S
 
 }
 
-
+@When("Added {string} items of the selected product to cart")
+public void Added_items_of_the_selected_product_to_cart(String quality)
+{
+   landingPage.incrementQuality(Integer.parseInt(quality));	
+   landingPage.addToCart();
+}
 
 
 
